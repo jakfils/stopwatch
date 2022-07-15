@@ -1,0 +1,46 @@
+.hidden {
+  display: none;
+}
+
+body {
+  font-size: 1.5em;
+  padding: 20px;
+  background-color: rgba(58, 33, 223, 0.556);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+#buttons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  margin: 20px 20px 0px 20px;
+}
+
+#container {
+  margin: auto;
+  /* width: 100%; */
+  /* background-color: antiquewhite; */
+  text-align: center;
+  color: white;
+}
+
+i {
+  color: white;
+  font-size: 1.5em;
+}
+
+.screen {
+  font-size: 1.6em;
+}
+
+.intervalElt {
+  margin-top: 7px;
+  font-weight: 300;
+}

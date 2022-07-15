@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Chronomètre</title>
+    <script
+      src="https://kit.fontawesome.com/69b270b4df.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">Chrono</h1>
+      <div class="screen">00 : 00 : 00 . 00</div>
+      <div id="buttons">
+        <button id="start"><i class="fas fa-solid fa-play"></i></button>
+        <button id="pause" class="hidden">
+          <i class="fas fa-solid fa-pause"></i>
+        </button>
+        <button id="resume" class="hidden">
+          <i class="fas fa-solid fa-play"></i>
+        </button>
+        <button id="interval" class="hidden">
+          <i class="fas fa-solid fa-flag"></i>
+        </button>
+        <button id="reset" class="hidden">
+          <i class="fas fa-solid fa-stop"></i>
+        </button>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
