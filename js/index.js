@@ -5,24 +5,25 @@ const resumeButton = document.getElementById("resume");
 const intervalButton = document.getElementById("interval");
 const resetButton = document.getElementById("reset");
 const screen = document.querySelector(".screen");
-
 let intervalId = 0;
 
+// functions
 function showElements(...args) {
   args.forEach((arg) => {
     arg.classList.remove("hidden");
   });
-}
-function myTimer() {
-  const newDate = Date.now();
-  diffTime = newDate - startDate;
-  screen.textContent = msToTime(diffTime);
 }
 
 function hideElements(...args) {
   args.forEach((arg) => {
     arg.classList.add("hidden");
   });
+}
+
+function showTime() {
+  const newDate = Date.now();
+  diffTime = newDate - startDate;
+  screen.textContent = msToTime(diffTime);
 }
 
 function addInterval(interval) {
@@ -53,7 +54,7 @@ startButton.addEventListener("click", (e) => {
   hideElements(startButton);
   showElements(pauseButton, intervalButton);
   startDate = Date.now();
-  interval = setInterval(myTimer, 90);
+  interval = setInterval(showTime, 90);
 });
 pauseButton.addEventListener("click", (e) => {
   hideElements(pauseButton, intervalButton);
@@ -70,7 +71,7 @@ resumeButton.addEventListener("click", (e) => {
   hideElements(resumeButton, resetButton);
   showElements(pauseButton, intervalButton);
   startDate = Date.now() - diffTime;
-  interval = setInterval(myTimer, 90);
+  interval = setInterval(showTime, 90);
 });
 
 resetButton.addEventListener("click", (e) => {
