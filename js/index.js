@@ -6,7 +6,7 @@ const intervalButton = document.getElementById("interval");
 const resetButton = document.getElementById("reset");
 const screen = document.querySelector(".screen");
 
-let i = 0;
+let intervalId = 0;
 
 function showElements(...args) {
   args.forEach((arg) => {
@@ -28,7 +28,7 @@ function hideElements(...args) {
 function addInterval(interval) {
   const intervalElt = document.createElement("div");
   intervalElt.classList.add("intervalElt");
-  intervalElt.textContent = "Intervalle " + i + ": " + interval;
+  intervalElt.textContent = interval;
   buttons.after(intervalElt);
 }
 
@@ -62,7 +62,7 @@ pauseButton.addEventListener("click", (e) => {
 });
 
 intervalButton.addEventListener("click", (e) => {
-  i++;
+  intervalId++;
   addInterval(screen.textContent);
 });
 
@@ -81,6 +81,6 @@ resetButton.addEventListener("click", (e) => {
     intervalElt.remove();
   });
   diffTime = 0;
-  i = 0;
+  intervalId = 0;
   screen.textContent = msToTime(diffTime);
 });
